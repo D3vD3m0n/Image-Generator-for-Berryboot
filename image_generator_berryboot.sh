@@ -30,6 +30,9 @@ options=("Skip" "Debian/Ubuntu" "CentOS" "Fedora" "ArchLinux")
 select opt in "${options[@]}"
 do
     case $opt in
+        "Skip")
+            break
+            ;;
         "Debian/Ubuntu")
 		
 echo ""
@@ -44,7 +47,8 @@ sleep 1
 clear
 			break
             ;;
-        "CentOS")
+        "CentOS")´
+
 echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
@@ -58,6 +62,7 @@ clear
 			break
             ;;
 			"Fedora")
+
 echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
@@ -71,6 +76,7 @@ clear
 			break
             ;;
 			"ArchLinux")
+
 echo ""
 echo "#### INSTALLING ARIA2/SQUASHFS-TOOLS ####"
 echo ""		
@@ -83,9 +89,6 @@ sleep 1
 clear
 			break
 			;;
-        "Skip")
-            break
-            ;;
         *) echo invalid option;;
     esac
 done
