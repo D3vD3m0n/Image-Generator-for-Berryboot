@@ -2,8 +2,7 @@
 set -o errexit  # stop execution on error
 given_file=$1 # retrieve input parameter and populate a variable
 
-if [ "$EUID" -ne 0 ]
-then 
+if [ "$EUID" -ne 0 ]; then 
     echo 1>&2 "Please run as root"
     exit 1
 fi
