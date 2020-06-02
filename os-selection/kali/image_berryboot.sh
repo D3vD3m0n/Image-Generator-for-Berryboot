@@ -1,11 +1,18 @@
 #!/bin/bash
-set -o errexit  # stop execution on error
-given_file=$1 # retrieve input parameter and populate a variable
+#set -o errexit  
+# stop execution on error
+given_file=""
+input1=$1 
+# retrieve input parameter and populate a variable
 
-if [ "$EUID" -ne 0 ]; then 
+if [ "$EUID" -ne 0 ]
+then 
     echo 1>&2 "Please run as root"
     exit 1
 fi
+
+#date
+date=$(date +"%d-%b-%Y")
 
 #date
 date=$(date +"%d-%b-%Y")
@@ -16,12 +23,15 @@ echo ""
 echo "#### KALI LINUX Image SELECTION ####"
 echo ""
 
-if [ -z given_file  ]; then
+if [ -z input1  ]; then
     read -p "Enter image path: " $given_file
+else 
+     given_file=input1
 fi
 
 if [ -f given_file  ]; then
-     #echo do something here file does exist
+     input1=given_file
+    echo 1>&2 "Image OK..."
 else 
     read -p "Enter image path: " $given_file
     if [ -f given_file  ]; then
