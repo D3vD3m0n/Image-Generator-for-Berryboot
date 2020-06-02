@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Universal Image Generator for Berryboot
-# Copyright 2018-2019 Alexander G.
-# http://www.alexgoldcheidt.com
-# https://github.com/agoldcheidt
+#image Generator for Berryboot
 
 if [ "$EUID" -ne 0 ]
 then 
@@ -108,14 +105,13 @@ echo ""
 
 #OS Menu Selection
 PS3='Please select the OS: '
-options=("LibreELEC (Kodi)" "Exit")
+options=("Android" "Kali Linux" "Ubuntu eoan" "Debian 9" "RetroPie Armbian" "LibreELEC (Kodi)" "Exit")
 select opt in "${options[@]}"
 do
     case $opt in
         "LibreELEC (Kodi)")
-
 #Starting LibreELEC Script
-bash <(wget -qO- https://git.io/fx6Zc)
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/libreelec/libreelec_by_berryserver.sh)
 		break
             ;;
         "Exit")
@@ -123,4 +119,59 @@ bash <(wget -qO- https://git.io/fx6Zc)
             ;;
         *) echo invalid option;;
     esac
+    case $opt in
+        "Kali Linux")
+#Starting Kali Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_berryboot.sh)
+		break
+            ;;
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+    case $opt in
+        "Android")
+#Starting LibreELEC Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/android/android_by_berryserver.sh)
+		break
+            ;;
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+    case $opt in
+        "Ubuntu eoan")
+#Starting LibreELEC Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/ubuntu/ubuntu_by_berryserver.sh)
+		break
+            ;;
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+    case $opt in
+        "Debian 9")
+#Starting LibreELEC Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/debian/debian_by_berryserver.sh)
+		break
+            ;;
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+     case $opt in
+        "RetroPie Armbian")
+#Starting LibreELEC Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/retropie/retropie_by_berryserver.sh)
+		break
+            ;;
+        "Exit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac    
 done
