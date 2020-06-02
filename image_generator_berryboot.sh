@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sudo bash
 
 #image Generator for Berryboot
 
@@ -113,27 +113,27 @@ do
     case $opt in
         "LibreELEC (Kodi)")
 #Starting LibreELEC Script
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/libreelec/libreelec_by_berryserver.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/libreelec/libreelec_by_berryserver.sh)
 		break
             ;;
         "Kali Linux")
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_berryboot.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_berryboot.sh)
 		break
             ;;
         "Android")
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/android/android_by_berryserver.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/android/android_by_berryserver.sh)
 		break
             ;;
         "Ubuntu eoan")
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/ubuntu/ubuntu_by_berryserver.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/ubuntu/ubuntu_by_berryserver.sh)
 		break
             ;;
         "Debian (dosbian_v1.5)")
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/debian/debian_by_berryserver.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/debian/debian_by_berryserver.sh)
 		break
             ;;
         "RetroPie Armbian")
-bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/retropie/retropie_by_berryserver.sh)
+sudo bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/retropie/retropie_by_berryserver.sh)
 		break
             ;;
         "Exit")
