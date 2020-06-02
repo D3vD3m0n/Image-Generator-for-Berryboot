@@ -15,4 +15,4 @@ First, install wget and sudo according to your OS:
 <pre>pacman -Syy --noconfirm wget sudo --force</pre>
 ## Usage
 Execute the script on any terminal and follow the instructions:
-<pre>bash <(wget -qO- https://git.io/fx6ZG)</pre>
+<pre>bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/image_generator_berryboot.sh)</pre>
