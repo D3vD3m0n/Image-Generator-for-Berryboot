@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# LibreELEC Image Generator for Berryboot
-# Copyright 2018-2019 Alexander G.
-# http://www.alexgoldcheidt.com
-# https://github.com/agoldcheidt
-
 if [ "$EUID" -ne 0 ]
 then 
     echo 1>&2 "Please run as root"
@@ -16,39 +11,38 @@ date=$(date +"%d-%b-%Y")
 
 sleep 1
 clear
-echo "----------------------------------------------------------"
-echo "  _    _ _            ___ _    ___ ___   _  __        _ _ ";
-echo " | |  (_) |__ _ _ ___| __| |  | __/ __| | |/ /___  __| (_)";
-echo " | |__| | '_ \ '_/ -_) _|| |__| _| (__  | ' </ _ \/ _\` | |";
-echo " |____|_|_.__/_| \___|___|____|___\___| |_|\_\___/\__,_|_|";
-echo "                                                          ";
-echo "----------------------------------------------------------"
 echo ""
-echo "#### LIBREELEC BUILD SELECTION ####"
+echo "#### KALI LINUX BUILD SELECTION ####"
 echo ""
 
 #LibreELEC ALPHA Image Menu Selection
-PS3='Please select LibreELEC build: '
-options=("LibreELEC Stable Builds [Official]" "LibreELEC Testing Builds [Official]" "LibreELEC Dev Builds [Milhouse]" "Exit")
+PS3='Please select KALI LINUX build: '
+options=("Select a Image" "KALI LINUX Rolling Builds [2020]" "KALI LINUX Stable Builds [2020]" "KALI LINUX Testing Builds [2020]" "Exit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "LibreELEC Stable Builds [Official]")
+        "KALI LINUX Stable Builds [2020]")
 
 #Starting Script
-bash <(wget -qO- https://git.io/fx6ZW)
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_official_stable_builds_berryboot.sh)
 		break
             ;;
-        "LibreELEC Testing Builds [Official]")
+        "KALI LINUX Testing Builds [2020]")
 		
 #Starting Script
-bash <(wget -qO- https://git.io/fx6Z8)
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_official_testing_builds_berryboot.sh)
 		break
             ;;
-			"LibreELEC Dev Builds [Milhouse]")
+			"KALI LINUX Rolling Builds [2020]")
 			
 #Starting Script
-bash <(wget -qO- https://git.io/fx6Z4)
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/Kali_2020_2a_dev_builds_berryboot.sh)
+		break
+            ;;
+        "Select a Image")
+			
+#Starting Script
+bash <(wget -qO- https://github.com/D3vD3m0n/Image-Generator-for-Berryboot/blob/master/os-selection/kali/image_berryboot.sh)
 		break
             ;;
         "Exit")
